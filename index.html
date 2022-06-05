@@ -221,13 +221,12 @@
         <ul class="team__list">
           <li class="team__item">
             <img srcset="
-            ./image/team/team_card_1_mobile_450.jpg 450w,
-            ./image/team/team_card_1_mobile_450@2x.jpg 900w,
-             ./image/team/team_card_1_tablet_354.jpg 354w,
-             ./image/team/team_card_1_tablet_354@2x.jpg 708w, 
-             ./image/team/tean_card_1_desktop_270.jpg 270w"
-              sizes="(max-width: 767px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px" class="team__img"
-              src="./image/team/tean_card_1_desktop_270.jpg" alt="Игорь Демьяненко" width="270" />
+            ./image/team/team_card_1_mobile_450.jpg 1x,
+            ./image/team/team_card_1_mobile_450@2x.jpg 2x,
+             ./image/team/team_card_1_tablet_354.jpg 1x,
+             ./image/team/team_card_1_tablet_354@2x.jpg 2x, 
+             " sizes="(max-width: 767px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
+              class="team__img" src="./image/team/tean_card_1_desktop_270.jpg" alt="Игорь Демьяненко" width="270" />
             <div class="team__descr">
               <h3 class="team__title">Игорь Демьяненко</h3>
               <p class="team__subtitle">Product Designer</p>
