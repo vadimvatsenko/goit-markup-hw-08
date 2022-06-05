@@ -1,0 +1,58 @@
+/* OK  */
+.client {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: -30px;
+
+    @media screen and (min-width:1200px) {
+        margin-top: 50px;
+        margin-bottom: 0;
+
+    }
+
+
+    &__list {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 30px;
+
+        @media screen and (min-width:768px) {
+            width: calc((100% - 60px) / 3);
+        }
+
+        @media screen and (min-width:1200px) {
+            width: calc((100% - 150px) / 6);
+            margin-bottom: 0;
+        }
+    }
+
+
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $link-color;
+        color: $link-color;
+        border-radius: 4px;
+        height: 92px;
+        width: 100%;
+
+
+        @include transition (border-color);
+        @include transition (color);
+
+        &:hover,
+        &:focus {
+            border-color: $hover-focus-color;
+            color: $hover-focus-color;
+        }
+    }
+
+    &__logo {
+        fill: currentColor;
+    }
+
+
+}

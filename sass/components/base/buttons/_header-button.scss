@@ -1,0 +1,41 @@
+.header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+
+  @media screen and (min-width:768px) {
+    display: none;
+
+  }
+
+  &:hover &__close-icon,
+  &:hover &__open-icon {
+    fill: $hover-focus-color;
+  }
+
+  &__open-icon,
+  &__close-icon {
+    display: inline-block;
+
+    fill: $main-text-color;
+    @include transition(fill);
+  }
+
+  &__close-icon {
+    display: none;
+  }
+
+  &.is-open &__close-icon {
+    display: block;
+  }
+
+  &.is-open &__open-icon {
+    display: none;
+  }
+}

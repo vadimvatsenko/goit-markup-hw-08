@@ -1,0 +1,58 @@
+/* OK  */
+.filters {
+  @media screen and (max-width:767px) {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-bottom: -15px;
+
+  }
+
+  @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list+&__list {
+    @media screen and (min-width:768px) {
+      margin-left: 8px;
+    }
+  }
+
+  &__list {
+    @media screen and (max-width:767px) {
+      margin-right: 8px;
+      margin-bottom: 15px;
+    }
+  }
+
+
+  &__button {
+    min-width: 73px;
+    /* - минимальная ширина самой маленько кнопки */
+    padding: 6px 22px;
+    background-color: $portfolio-filter-bg;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    border-radius: 4px;
+    border: none;
+
+    cursor: pointer;
+
+    @include transition(background-color);
+    @include transition(color);
+    @include transition(box-shadow);
+
+    &--active,
+    &:hover,
+    &:focus {
+      color: $white-tx-bg-color;
+      background-color: $hover-focus-color;
+      box-shadow: $filter-btn-shadow;
+    }
+  }
+}

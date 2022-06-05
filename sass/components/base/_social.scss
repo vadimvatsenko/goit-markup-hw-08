@@ -1,0 +1,39 @@
+.social {
+    display: flex;
+    justify-content: center;
+
+
+    &__link {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $link-color;
+        @include transition (color);
+        @include transition (background-color);
+
+        &:hover,
+        &:focus {
+            background-color: $hover-focus-color;
+            color: $white-tx-bg-color;
+        }
+
+        &--grey {
+            background-color: $footer-social-bg;
+        }
+    }
+
+    &__icon+&__icon {
+        margin-left: 10px;
+    }
+
+    &__img {
+        fill: currentColor;
+
+        &--white {
+            fill: $white-tx-bg-color;
+        }
+    }
+}

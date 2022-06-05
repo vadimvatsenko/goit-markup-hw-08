@@ -1,0 +1,45 @@
+.doing {
+    padding-top: 0;
+
+    &__list {
+
+        display: flex;
+        margin-top: 50px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item+&__item {
+        margin-left: 30px;
+    }
+
+    &__img {
+        display: block;
+        min-width: 100%;
+        min-height: auto;
+    }
+
+    &__subtitle {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        height: 70px;
+        width: 100%;
+        color: $white-tx-bg-color;
+        background-color: $doing-subtitle-bg;
+
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+
+    @media screen and (max-width:1199px) {
+        display: none;
+    }
+
+}

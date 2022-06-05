@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    /* - убирает рамку вокруг body */
+    background-color: var(--white-tx-bg-color);
+    color: $main-text-color;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+/* обнуляем стили браузера по умолчанию */
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* обнуляем стили браузера у списков */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+
+
+
+    @media screen and (min-width:768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 1200px;
+    }
+
+}

@@ -1,0 +1,26 @@
+@import './utils/colors';
+@import './utils/bg-colors';
+@import './utils/shadows';
+@import './utils/mixins';
+
+@import './components/base/global';
+@import './components/base/title';
+@import './components/base/header';
+@import './components/base/logo';
+@import './components/base/buttons/buttons';
+@import './components/base/social';
+@import './components/base/footer';
+
+
+@import './components/main/banner';
+@import './components/main/modal';
+@import './components/main/peculiarities';
+@import './components/main/doing';
+@import './components/main/team';
+@import './components/main/clients';
+
+@import './components/portfolio/portfolio';
+
+* {
+    outline: 1px solid tomato;
+}

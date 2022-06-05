@@ -1,0 +1,52 @@
+/* DONE */
+/* наша команда */
+.team {
+    min-height: 648px;
+    background-color: $bg-team;
+    &__list {
+        display: flex;
+        margin-top: 50px;
+    }
+    &__item {
+        background: $white-tx-bg-color;
+        box-shadow: $team-card-shadow;
+        border-radius: 0px 0px 4px 4px;
+    }
+    &__item + &__item {
+        margin-left: 30px;
+    }
+    &__descr {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+    }
+    &__img {
+        display: block;
+        min-width: 100%;
+        min-height: auto;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        margin-bottom: 16px;
+        color: $second-text-color;
+    
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+

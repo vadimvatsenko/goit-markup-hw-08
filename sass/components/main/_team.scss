@@ -1,0 +1,80 @@
+.team {
+    background-color: $bg-team;
+    min-width: 480px;
+
+    &__list {
+        margin-top: 30px;
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: -30px;
+        }
+
+        @media screen and (min-width:1200px) {
+            margin-top: 50px;
+        }
+    }
+
+    &__item {
+        background: $white-tx-bg-color;
+        box-shadow: $team-card-shadow;
+        border-radius: 0px 0px 4px 4px;
+
+        @media screen and (min-width:768px) {
+            width: calc((100% - 30px) / 2);
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width:1200px) {
+            width: calc((100% - 90px) / 4)
+        }
+    }
+
+    &__item+&__item {
+        margin-top: 30px;
+
+        @media screen and (min-width:768px) {
+            margin-top: 0;
+        }
+    }
+
+
+
+    &__descr {
+        padding-top: 30px;
+        padding-bottom: 24px;
+
+        @media screen and (min-width:1200px) {
+            padding-bottom: 30px;
+
+        }
+
+
+
+    }
+
+    &__img {
+        display: block;
+        min-width: 100%;
+        min-height: auto;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: 10px;
+        margin-bottom: 16px;
+        color: $second-text-color;
+
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+}

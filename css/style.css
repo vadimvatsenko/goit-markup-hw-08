@@ -1,0 +1,854 @@
+/* переменные */
+:root {
+    --bg-team: #F5F4FA;
+    --main-text-color: #212121;
+    --second-text-color: #757575;
+    --hover-focus-color: #2196F3;
+    --white-tx-bg-color: #FFFFFF;
+    --logo-header-color: #000000;
+    --footer-bg-color: #2F303A;
+    --footer-contact-color: rgba(255, 255, 255, 0.6);
+    --portfolio-filter-bg-color: #F5F4FA;
+    --header-border-color: #ECECEC;
+    --header-border: 1px solid #ECECEC;
+    --main-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    --team-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                        0px 1px 1px rgba(0, 0, 0, 0.14),
+                        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --porfolio-filter-btn-act:  0px 3px 1px rgba(0, 0, 0, 0.1),
+                                0px 1px 2px rgba(0, 0, 0, 0.08),
+                                0px 2px 2px rgba(0, 0, 0, 0.12);
+    --project-border-style: solid #EEEEEE;
+    --link-color: #AFB1B8; 
+    --project-shadow:   0px 1px 1px rgba(0, 0, 0, 0.12),
+                        0px 4px 4px rgba(0, 0, 0, 0.06),
+                        1px 4px 6px rgba(0, 0, 0, 0.16);
+    --peculiarities-list-bg: #F5F4FA;
+    --footer-social-bg: rgba(255, 255, 255, 0.1);
+    --banner-linear-gradient: rgba(47, 48, 58, 0.4);
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --overlay-bg-color: rgba(33, 150, 243, 0.9);
+    --doing-subtitle-bg: rgba(47, 48, 58, 0.8);
+    --backdrop-color: rgba(0, 0, 0, 0.2);
+    --modal-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                        0px 1px 1px rgba(0, 0, 0, 0.14),
+                        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --modal-botton-border: 1px solid rgba(0, 0, 0, 0.1);
+    --modal-field-color: rgba(33, 33, 33, 0.2);
+    --textarea-placeholder-text: rgba(117, 117, 117, 0.5);
+    --footer-placeholded-text: rgba(255, 255, 255, 0.6)
+
+                
+}
+/* * {
+    outline: 1px solid tomato;
+} */
+/* Повторяющие стили на странице */
+body {
+    margin: 0; /* - убирает рамку вокруг body */
+    background-color: var(--white-tx-bg-color);
+    color: var(--main-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+/* обнуляем стили браузера по умолчанию */
+h1,h2,h3,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* обнуляем стили браузера у списков */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* глобальный padding для всех секций */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+/* контейнер для всех секций */
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* хедер */
+.header {
+    position: relative;
+    background-color: var(--white-tx-bg-color);
+    border-bottom: var(--header-border)
+}
+/* обертка для всех блоков в хедере */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+}
+/* навигационное меню */
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+/* общий стиль для лого */
+.logo {
+    color: var(--hover-focus-color);
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+}
+/* лого в хедере */
+.logo-header {
+    color: var(--logo-header-color);
+}
+/* ul для списка меню */
+.header-lists {
+    display: flex;
+    margin-left: 93px;
+}
+/* Каждый эдемент со списка будет иметь левый margin кроме первого */ 
+.header-lists>.header-list + .header-list {
+    margin-left: 50px;
+}
+.header-list>.link {
+    display: block; /* - У ссылок не работает вертикальная геометрия, потому им нужно ставить display block */
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: var(--main-text-color);
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    
+    transition: color 250ms var(--timing-function);
+}
+.header-list>.link:hover,
+.header-list>.link:focus,
+.link.current {
+    color: var(--hover-focus-color);
+}
+/* нижнее подчёркивание в меню */
+.header-list>.link.current::after,
+.header-list>.link:after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: var(--hover-focus-color);
+    border-radius: 2px;
+
+    opacity: 0; /* - не видно по умолчанию подчёркивание в меню*/
+    transition: opacity 250ms var(--timing-function), 
+                width 250ms var(--timing-function)  ;
+}
+.header-list>.link:hover::after {
+    opacity: 1;
+    width:100%;
+}
+.header-list>.link.current::after {
+    opacity: 1;
+    width: 100%;
+}
+.header-contacts {
+    /* display: inline-flex; */
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* - контакты отодвигаем в право  */
+}
+.header-contacts>.header-contact + .header-contact {
+    margin-left: 50px;
+}
+.header-contact>.email,
+.header-contact>.phone {
+    
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    color: var(--second-text-color);
+    
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms var(--timing-function);
+}
+.header-contact>.email:hover,
+.header-contact>.email:focus,
+.header-contact>.phone:hover,
+.header-contact>.phone:focus {
+    color: var(--hover-focus-color);
+}
+.phone-icon,
+.envelope-icon {
+    margin-right: 10px;
+    fill: currentColor
+}
+/* баннер */
+.banner {
+    background-color: var(--footer-bg-color); /* - оставляем в случае если не загрузится картинка */
+    background-image: linear-gradient(
+        var(--banner-linear-gradient),
+        var(--banner-linear-gradient)), 
+        url(../image/bg/banner.jpg);
+    background-repeat: no-repeat; /* - картинку не повторять */
+    background-position: center; /* - по центру */
+    background-size: cover;
+    margin-left: auto; /* - центрирование баннера */
+    margin-right: auto; /* - центрирование баннера */
+    max-width: 1600px; /* - ширина баннера, растягивать нельзя */
+    min-height: 600px;
+    text-align: center; /* - если задать это значение, то все элементы внутри секции будут по центру, если их дети display: inline-block */
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+/* заголовок баннера */
+.banner-title {
+    width: 696px;
+    margin: 0 auto;
+    color: var(--white-tx-bg-color);
+    
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+/* кнопка - строчно-блочный элемент */
+.main-button {
+    margin-top: 30px;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+
+    color: var(--white-tx-bg-color);
+    background-color: var(--hover-focus-color);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+
+    transition: box-shadow 250ms var(--timing-function) ;
+}
+.main-button:hover,
+.main-button:focus {
+    box-shadow: var(--main-button-shadow)
+}
+/* По умолчанию backdrop скрыт через js  */
+.backdrop {
+    position: fixed;
+    /* - фиксирован но всему экрану */
+    top: 0;
+    left: 0;
+    /* По всей высоте и ширине окна */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    /* - backdrop был за doing */
+    opacity: 1;
+
+    transition: opacity 250ms var(--timing-function);
+
+}
+/* поведение backdrop когда скрывается */
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none; /* - не пропускает нажатие мыши */
+}
+/* модальное окно */
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-tx-bg-color);
+    box-shadow: var(--modal-box-shadow);
+    border-radius: 4px;
+
+}
+/* кнопка в модальном окне */
+.modal-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    right: 8px;
+    top: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    background: var(--white-tx-bg-color);
+    border: var(--modal-botton-border);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: fill 250ms var(--timing-function);
+}
+.modal-button:hover,
+.modal-button:focus {
+    fill: var(--hover-focus-color);
+}
+
+/* Заголовок модального окна  */
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-text-color)
+}
+/* группировка всех форм */
+.fieldset-forms {
+    margin-top: 12px;
+}
+.fieldset-forms .form {
+    display: flex;
+    flex-direction: column;
+}
+/* заголовки полей */
+.form {
+    position: relative;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: var(--second-text-color);
+
+    cursor: pointer;
+}
+.form:first-child {
+    margin-top: 0;
+}
+/* форма поля */
+.form .field {
+    margin-top: 4px;
+    padding: 0;
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--white-tx-bg-color);
+    border: 1px solid var(--modal-field-color);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: border-color 250ms var(--timing-function),
+                outline 250ms var(--timing-function);
+
+}
+.form .field:focus {
+    border: 1px solid var(--hover-focus-color);
+    outline: inherit
+}
+.name-icon {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    fill: var(--main-text-color);
+}
+.form .field:focus + .name-icon {
+    fill: var(--hover-focus-color)
+}
+.form>.field-textarea {
+    margin-top: 4px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+}
+/* стиль placeholder */
+.form>.field-textarea::placeholder {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: var(--textarea-placeholder-text);
+}
+.fieldset-forms .form-checkbox {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.form-checkbox>.checkbox-descr {
+    font-size: 14px;
+}
+/* лицензионное соглашение */
+.checkbox-descr>.checkbox-link {
+    color: var(--hover-focus-color)
+}
+/* скрываем chexkbox */
+.checkbox-input {
+    position: absolute;
+    width: 1px;
+    height: -1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.checkbox-input:focus-within + .checkbox-icon {
+    border: 1px solid var(--hover-focus-color)
+}
+.checkbox-icon {
+    display: inline-block;
+    margin-right: 7px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--modal-field-color);
+    border-radius: 4px;
+
+    transition: background 250ms var(--timing-function);
+}
+
+/* когда checkbox активен, то применяются такие стили */
+.checkbox-input:checked + .checkbox-icon {
+    border-color: var(--hover-focus-color);
+    background-color: var(--hover-focus-color);
+    background-image: url(../image/icons/full-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+.main-button.form-button {
+    padding: 10px 55px;
+}
+/* Заголовок особенности скрыт */
+.peculiarities-title {
+    font-size: 0;
+}
+/* список особенностей */
+.peculiarities-lists {
+    display: flex;
+}
+.peculiarities-list {
+    width: calc((100% - 90px) / 4); /* 90px- три отступа по 30px */
+}
+.peculiarities-list::before {
+    display: block; /* - ставим, потому, что не работает геометрия */
+    content:'';
+    height: 120px;
+    background: var(--peculiarities-list-bg);
+    border-radius: 4px;
+    background-image: url(../image/peculiarities/antenna.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+.peculiarities-list.icon-clock::before { /* - дополнительные классы для добавления разных иконок */
+    background-image: url(../image/peculiarities/clock.svg);
+}
+.peculiarities-list.icon-notebook::before {
+    background-image: url(../image/peculiarities/notebook.svg);
+}
+.peculiarities-list.icon-astronaut::before {
+    background-image: url(../image/peculiarities/astronaut.svg);
+}
+.peculiarities-list + .peculiarities-list {
+    margin-left: 30px;
+}
+.peculiarities-list>.title {
+    font-size: 14px; /* - размер не наследуется от body */
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase
+}
+.peculiarities-list>.subtitle {
+    margin-top: 10px;
+    color: var(--second-text-color);
+    line-height: 1.71;  
+}
+/* у секции "Чем Занимаемся" отсутствует padding-top */
+.doing {
+    padding-top: 0;
+}
+.doing-items {
+    display: flex;
+    margin-top: 50px;
+}
+.doing-items>.doing-item + .doing-item {
+    margin-left: 30px;
+}
+/* адаптивная картинка без отступа внизу */
+.doing-item> .doing-img{
+    display: block;
+    min-width: 100%;
+    min-height: auto;
+}
+.doing-item {
+    position: relative;
+}
+.doing-subtitle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    color: var(--white-tx-bg-color);
+    background-color: var(--doing-subtitle-bg);
+
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.doing-title,
+.team-title,
+.client-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+/* наша команда */
+.team {
+    min-height: 648px;
+    background-color: var(--bg-team);
+}
+.team-cards {
+    display: flex;
+    margin-top: 50px;
+}
+.team-card {
+    background: var(--white-tx-bg-color);
+    box-shadow: var(--team-card-shadow);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-cards>.team-card + .team-card {
+    margin-left: 30px;
+}
+.team-cards .card-descr {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.team-card> .card-img {
+    display: block;
+    min-width: 100%;
+    min-height: auto;
+}
+.card-descr>.title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+.card-descr>.subtitle{
+    margin-top: 10px;
+    color: var(--second-text-color);
+    
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+.social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--link-color);
+    transition: color 250ms var(--timing-function),
+                background-color 250ms var(--timing-function);
+}
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--hover-focus-color);
+    color:var(--white-tx-bg-color)
+}
+.icon-img {
+    /* width: 20px;
+    height: 20px; */
+    fill: currentColor /* - унаследует текущее состояние color у родителя в данном случае у social-link */
+}
+/* наши клиенты */
+.client-lists {
+    display: flex;
+    margin-top: 50px;
+}
+.client-list + .client-list{
+    margin-left: 30px;
+}
+.client-list>.client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+
+    transition: color 250ms var(--timing-function),
+                border-color 250ms var(--timing-function);
+}
+.client-link:hover,
+.client-link:focus {
+    border-color: var(--hover-focus-color);
+    color: var(--hover-focus-color)
+}
+.client-logo {
+    fill: currentColor;
+   /*  width: 160px;
+    height: 60px; */
+}
+.footer {
+    min-height: 252px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--footer-bg-color)
+}
+.logo-footer {
+    color: var(--white-tx-bg-color);
+}
+.footer-address {
+    margin-top: 20px;
+}
+.footer-contact {
+    font-style: normal;
+}
+.footer-contact + .footer-contact {
+    margin-top: 9px;
+}
+.footer-contact>.address {
+    color: var(--white-tx-bg-color);
+
+}
+.footer-contact>.email,
+.footer-contact>.phone {
+    color: var(--footer-contact-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 250ms var(--timing-function);
+}
+.footer-contact>.email:hover,
+.footer-contact>.email:focus,
+.footer-contact>.phone:hover,
+.footer-contact>.phone:focus {
+    color: var(--hover-focus-color)
+}
+.footer-wrapper {
+    display: flex;
+    align-items: baseline;
+}
+.footer-social{
+    margin-left: 70px;
+}
+.social-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white-tx-bg-color)
+}
+.footer-social .social-icon {
+    margin-right: 10px;
+}
+.footer-social .social-icon:last-child {
+    margin-right: 0;
+}
+.footer-social .social-link {
+    background: var(--footer-social-bg);
+}
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
+    background: var(--hover-focus-color);
+}
+.social-footer +.social-footer {
+    margin-left: 10px;
+}
+.footer-icons {
+    margin-top: 20px;
+}
+.footer-social .icon-img{
+    fill: var(--white-tx-bg-color);
+}
+/* Подписка */
+.footer-subscribe {
+    margin-left: auto;
+}
+.footer-form {
+    display: flex;
+    justify-content: center;
+}
+.subscribe-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-tx-bg-color)
+}
+.footer-input {
+    padding: 15px;
+    margin-right: 12px;
+    width: 358px;
+
+    color: var(--white-tx-bg-color);
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+.footer-input::placeholder{
+    font-size: 16px;
+    color: var(--footer-placeholded-text);
+
+}
+.main-button.footer-botton {
+    margin-top: 0;
+    padding: 10px 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-icon {
+    margin-left: 10px;
+    fill: currentColor;
+}
+/* portfolio  */
+/* Главного заголвка Портфолио нет в макете, потому скрыт */
+.portfolio-title {
+    font-size: 0;
+}
+/* блок кнопок */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+}
+.portfolio-filter + .portfolio-filter {
+    margin-left: 8px;
+}
+/* Фильтр меню кнопок портфолио */
+.filter-button {
+    min-width: 73px; /* - минимальная ширина самой маленько кнопки */
+    padding: 6px 22px;
+    background-color: var(--portfolio-filter-bg-color);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    
+    border-radius: 4px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: background-color 250ms var(--timing-function),
+                color 250ms var(--timing-function),
+                box-shadow 250ms var(--timing-function);
+}
+.filter-button.active,
+.filter-button:hover,
+.filter-button:focus {
+    color: var(--white-tx-bg-color);
+    background-color: var(--hover-focus-color);
+    box-shadow : var(--porfolio-filter-btn-act)
+}
+/* убраны подчёркивания */ 
+.project-link {
+    text-decoration: none;
+}
+.project-header>.title {
+    color: var(--main-text-color);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;   
+}
+.project-header>.subtitle {
+    margin-top: 4px;
+    color: var(--second-text-color);
+
+    font-size: 16px;
+    line-height: 1.88;
+}
+/* список проектов */
+.portfolio-projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-right: -30px;
+    margin-bottom: -30px;
+}
+/* карточка проекта */
+.portfolio-project {
+    width: calc( 100% / 3 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.project-link { /* - ссылку дедаем блочной, так как на нее не работает геометрия и эффекты ховера */
+    display: block;
+    transition: box-shadow 250ms var(--timing-function);
+}
+.project-link:hover,
+.project-link:focus {
+    box-shadow: var(--project-shadow)
+}
+.portfolio-project .project-header {
+    padding: 20px 24px;
+    border: var(--project-border-style);
+    border-width: 0 1px 1px 1px;
+}
+/* эксперимент с отзывчивым изображением */
+.portfolio-project .project-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* обёртка для картинки и оверлей */
+.project-overlay {
+    position: relative;
+    overflow: hidden; /* - скрывает всё, что выходит за область блока */
+}
+.overlay-descr {
+    position: absolute;
+    padding: 63px 23px;
+    
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg-color);
+
+    bottom: 0;
+    transform: translateY(100%);/*  - о оси y опускается вниз на всю высоту родителя */
+
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-tx-bg-color);
+
+    transition: transform 250ms var(--timing-function);
+}
+.project-link:hover .overlay-descr,
+.project-link:focus .overlay-descr {
+    transform: translateY(0)
+}
+

@@ -1,0 +1,81 @@
+/* DONE */
+.footer {
+    min-height: 252px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $footer-bg-color;
+}
+.footer-wrapper {
+    display: flex;
+    align-items: baseline;
+}
+.footer-address {
+    margin-top: 20px;
+    &__list {
+        font-style: normal;
+    }
+    &__adr {
+        color: $white-tx-bg-color;
+    }
+    &__item + &__item {
+        margin-top: 9px;
+    }
+    &__email, &__phone {
+        text-decoration: none;
+        color: $footer-contact-color;
+        cursor: pointer;
+        @include transition (color);
+        &:hover, &:focus {
+            color: $hover-focus-color;
+
+        }
+    }
+}
+.footer-social {
+    margin-left: 70px;
+    &__title {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white-tx-bg-color;
+    }
+}
+
+/* Подписка */
+.footer-subscribe {
+    margin-left: auto;
+    &__form {
+        display: flex;
+        justify-content: center;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $white-tx-bg-color;
+    }
+    &__field {
+        padding: 15px;
+        margin-right: 12px;
+        width: 358px;
+    
+        color: $white-tx-bg-color;
+        background-color: inherit;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+    
+        cursor: pointer;
+        &::placeholder {
+            font-size: 16px;
+            color: $footer-placeholded-text;
+        }
+    }
+}
+
+
+
+
+
