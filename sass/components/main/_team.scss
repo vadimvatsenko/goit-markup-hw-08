@@ -1,6 +1,5 @@
 .team {
     background-color: $bg-team;
-    min-width: 480px;
 
     &__list {
         margin-top: 30px;
@@ -21,6 +20,7 @@
         background: $white-tx-bg-color;
         box-shadow: $team-card-shadow;
         border-radius: 0px 0px 4px 4px;
+
 
         @media screen and (min-width:768px) {
             width: calc((100% - 30px) / 2);
@@ -53,12 +53,6 @@
 
 
 
-    }
-
-    &__img {
-        display: block;
-        min-width: 100%;
-        min-height: auto;
     }
 
     &__title {

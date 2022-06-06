@@ -5,11 +5,13 @@
     padding-bottom: 60px;
     background-color: $footer-bg-color;
     background-size: cover;
-    min-width: 480px;
     text-align: center;
+
+
 
     @media screen and (min-width:1200px) {
         text-align: left;
+
     }
 }
 
