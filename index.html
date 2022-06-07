@@ -17,9 +17,17 @@
 <body>
   <!--шапка-->
   <header class="header">
-    <nav class="container header-menu">
+    <nav class="container header-wrapper">
+
       <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
-      <div class="header-menu__mobile" data-menu>
+      <button class="header-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg class="header-button__icons" width="40px" height="40px" aria-label="Переключатель мобильного меню">
+          <use class="header-button__open-icon" href="./image/icons/symbol-defs.svg#icon-menu"></use>
+          <use class="header-button__close-icon" href="./image/icons/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <div class="header-menu" data-menu>
         <ul class="header-menu__list">
           <li class="header-menu__item">
             <a href="./index.html" class="header-menu__link header-menu__link--current">Студия</a>
@@ -64,12 +72,7 @@
           </li>
         </ul>
       </div>
-      <button class="header-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-        <svg class="header-button__icons" width="40px" height="40px" aria-label="Переключатель мобильного меню">
-          <use class="header-button__open-icon" href="./image/icons/symbol-defs.svg#icon-menu"></use>
-          <use class="header-button__close-icon" href="./image/icons/symbol-defs.svg#icon-close"></use>
-        </svg>
-      </button>
+
 
     </nav>
   </header>
