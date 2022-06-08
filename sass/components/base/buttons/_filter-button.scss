@@ -5,7 +5,6 @@
     justify-content: start;
     flex-wrap: wrap;
     margin-bottom: -15px;
-
   }
 
   @media screen and (min-width:768px) {
@@ -42,13 +41,12 @@
 
     cursor: pointer;
 
-    @include transition(background-color);
-    @include transition(color);
-    @include transition(box-shadow);
+    @include transition (all);
 
-    /* &--active, */
+    &--active,
     &:hover,
     &:focus {
+
       color: $white-tx-bg-color;
       background-color: $hover-focus-color;
       box-shadow: $filter-btn-shadow;

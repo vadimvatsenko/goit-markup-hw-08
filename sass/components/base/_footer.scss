@@ -7,11 +7,8 @@
     background-size: cover;
     text-align: center;
 
-
-
     @media screen and (min-width:1200px) {
         text-align: left;
-
     }
 }
 
@@ -20,8 +17,6 @@
         display: flex;
         align-items: baseline;
     }
-
-
 }
 
 .footer-wrap {
@@ -61,7 +56,6 @@
         &:hover,
         &:focus {
             color: $hover-focus-color;
-
         }
     }
 }
@@ -80,13 +74,10 @@
         font-weight: 700;
         text-transform: uppercase;
         color: $white-tx-bg-color;
-
-
     }
 }
 
 .footer-subscribe {
-
     margin-top: 60px;
 
     @media screen and (min-width:1200px) {
@@ -110,24 +101,18 @@
         font-size: 14px;
         text-transform: uppercase;
         color: $white-tx-bg-color;
-
-
     }
 
     &__field {
         width: 100%;
         padding: 15px;
         margin-right: 12px;
-
-
         color: $white-tx-bg-color;
         background-color: inherit;
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
-
         cursor: pointer;
-
 
         &::placeholder {
             font-size: 16px;

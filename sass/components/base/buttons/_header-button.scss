@@ -8,17 +8,14 @@
   background-color: transparent;
   z-index: 2;
   cursor: pointer;
-
   margin-left: auto;
-
 
   @media screen and (min-width:768px) {
     display: none;
-
   }
 
-  &:hover &__close-icon,
-  &:hover &__open-icon {
+  &:active &__close-icon,
+  &:active &__open-icon {
     fill: $hover-focus-color;
   }
 

@@ -1,6 +1,4 @@
 .header {
-
-
     min-height: 60px;
     background-color: $white-tx-bg-color;
     @include header-border;
@@ -22,25 +20,20 @@
 
     @media screen and (min-width:768px) {
         padding: 0;
-
     }
-
 }
 
 .header-menu {
-    min-width: 320px;
     position: absolute;
+    padding: 48px 83px 48px 40px;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    transform: translateY(-101%);
-
-    padding: 48px 83px 48px 40px;
     background-color: $white-tx-bg-color;
     box-shadow: $mobile-menu-shadow;
+    transform: translateY(-101%);
     @include transition (transform);
-
     z-index: 1;
 
     @media screen and (min-width:320px) and (max-width: 479px) {
@@ -48,7 +41,6 @@
     }
 
     @media screen and (min-width:768px) {
-
         padding: 0;
         position: static;
         transform: translateY(0);
@@ -62,7 +54,6 @@
 
     @media screen and (min-width:1200px) {
         margin-left: 93px;
-
     }
 }
 
@@ -83,8 +74,6 @@
     @media screen and (min-width:768px) {
         margin-top: 0;
         margin-left: 50px;
-
-
     }
 }
 
@@ -93,7 +82,6 @@
     font-weight: 500;
     font-size: 40px;
     letter-spacing: 0.02em;
-
     color: $main-text-color;
     text-decoration: none;
 
@@ -102,16 +90,13 @@
         font-size: 14px;
         padding-top: 32px;
         padding-bottom: 32px;
-        @include transition (color);
-        @include transition (opacity);
+        @include transition (all);
 
         &::after {
             content: '';
-
             position: absolute;
             left: 0;
             bottom: -1px;
-
             display: block;
             width: 100%;
             height: 4px;
@@ -124,16 +109,12 @@
         &:hover,
         &:focus {
             color: $hover-focus-color;
+            @include transition (all);
 
             &:after {
                 opacity: 1;
             }
-
-            @include transition (opacity);
-            @include transition (width);
-
         }
-
     }
 }
 
@@ -147,7 +128,6 @@
             position: absolute;
             left: 0;
             bottom: -1px;
-
             display: block;
             width: 100%;
             height: 4px;
@@ -155,7 +135,6 @@
             border-radius: 2px;
             opacity: 1;
         }
-
     }
 }
 
@@ -177,20 +156,14 @@
         flex-direction: row-reverse;
         align-items: center;
         margin-left: auto;
-
-
     }
-
 }
-
-
 
 .contact-list__item {
     @media screen and (min-width:768px) {
         display: flex;
         align-items: center;
     }
-
 }
 
 .contact-list__item+.contact-list__item {
@@ -214,13 +187,11 @@
     font-size: 34px;
     letter-spacing: 0.02em;
     text-decoration: none;
-
     color: $hover-focus-color;
 
     @media screen and (min-width:320px) and (max-width:479px) {
         font-size: 24px;
     }
-
 
     @media screen and (min-width:768px) {
         display: flex;
@@ -279,7 +250,6 @@
         display: block;
         margin-right: 10px;
         fill: currentColor;
-
     }
 }
 
@@ -306,13 +276,10 @@
 
     @media screen and (max-width:479px) {
         padding-right: 0;
-
         margin-bottom: 10px;
         border: none
     }
 }
-
-
 
 .social-list__link {
     display: block;
@@ -320,7 +287,5 @@
     font-size: 18px;
     letter-spacing: 0.02em;
     text-decoration: none;
-
     color: $hover-focus-color;
-
 }
