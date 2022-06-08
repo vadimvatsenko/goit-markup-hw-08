@@ -46,7 +46,7 @@
     @include transition(color);
     @include transition(box-shadow);
 
-    &--active,
+    /* &--active, */
     &:hover,
     &:focus {
       color: $white-tx-bg-color;
