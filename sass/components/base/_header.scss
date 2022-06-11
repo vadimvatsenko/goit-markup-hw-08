@@ -1,5 +1,4 @@
 .header {
-    min-height: 60px;
     background-color: $white-tx-bg-color;
     @include header-border;
 
@@ -24,8 +23,11 @@
 }
 
 .header-menu {
+    /* position: fixed; */
     position: absolute;
     padding: 48px 83px 48px 40px;
+    /* height: 100hv;
+    width: 100wh; */
     top: 0;
     left: 0;
     right: 0;
