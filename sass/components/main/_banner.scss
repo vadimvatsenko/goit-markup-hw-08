@@ -15,7 +15,7 @@
     @media screen and (max-width:767px) {
         background-image: linear-gradient($banner-linear-gradient,
                 $banner-linear-gradient), url(../image/bg/banner-mobile.jpg);
-        max-width: 480px;
+        min-width: 100%;
         max-height: 400px;
 
         @media (min-device-pixel-ratio: 2),
@@ -28,8 +28,8 @@
     }
 
     @media screen and (min-width:768px) {
-        max-width: 768px;
-        height: 400px;
+        min-width: 100%;
+        min-height: 400px;
         background-image: linear-gradient($banner-linear-gradient,
                 $banner-linear-gradient), url(../image/bg/banner-tablet.jpg);
 

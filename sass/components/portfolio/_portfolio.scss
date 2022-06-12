@@ -22,7 +22,6 @@
 
         @media screen and (min-width:768px) {
             width: calc((100% - 30px) / 2);
-            vertical-align: bottom;
         }
 
         @media screen and (min-width:1200px) {
@@ -77,7 +76,6 @@
         width: 100%;
         height: 100%;
         background: $overlay-bg-color;
-
         bottom: 0;
 
         font-size: 18px;
@@ -87,12 +85,14 @@
         @include transition (transform);
 
         @media screen and (max-width: 479px) {
-            font-size: 1em;
-            padding: 7%;
+            font-size: 4vw;
+            padding: 10vw 5vw;
         }
 
-        @media screen and (min-width: 480px) {
+        @media screen and (min-width: 480px) and (max-width: 767px) {
             padding: 77px 24px;
+            font-size: 4vw;
+
         }
 
         @media screen and (min-width: 768px) {

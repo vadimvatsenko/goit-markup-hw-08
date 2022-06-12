@@ -1,6 +1,9 @@
 .header {
     background-color: $white-tx-bg-color;
     @include header-border;
+    position: relative;
+
+
 
     @media screen and (min-width:768px) {
         padding: 0;
@@ -8,41 +11,41 @@
 }
 
 .header-wrapper {
+    position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     align-items: center;
 
-    @media screen and (min-width:320px) and (max-width:767px) {
-        position: relative;
-    }
-
     @media screen and (min-width:768px) {
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
 .header-menu {
-    /* position: fixed; */
-    position: absolute;
+
+
     padding: 48px 83px 48px 40px;
-    /* height: 100hv;
-    width: 100wh; */
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+
     background-color: $white-tx-bg-color;
     box-shadow: $mobile-menu-shadow;
-    transform: translateY(-101%);
+    transform: translateX(-100%);
     @include transition (transform);
     z-index: 1;
 
-    @media screen and (min-width:320px) and (max-width: 479px) {
-        padding: 48px 40px;
+
+    @media screen and (max-width:767px) {
+        position: fixed;
+        height: 100vh;
+
     }
 
     @media screen and (min-width:768px) {
+        width: 100%;
         padding: 0;
         position: static;
         transform: translateY(0);
@@ -60,7 +63,7 @@
 }
 
 .header-menu.is-open {
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .header-menu__list {
@@ -86,6 +89,10 @@
     letter-spacing: 0.02em;
     color: $main-text-color;
     text-decoration: none;
+
+    @media screen and (max-width:479px) {
+        font-size: 8vw;
+    }
 
     @media screen and (min-width:768px) {
         position: relative;
@@ -143,10 +150,6 @@
 .contact-list {
     margin-top: 302px;
 
-    @media screen and (max-width:479px) {
-        margin-top: 100px;
-    }
-
     @media screen and (min-width: 768px) {
         margin-top: 0;
         margin-left: auto;
@@ -191,8 +194,9 @@
     text-decoration: none;
     color: $hover-focus-color;
 
-    @media screen and (min-width:320px) and (max-width:479px) {
-        font-size: 24px;
+    @media screen and (max-width:479px) {
+        font-size: 6vw;
+
     }
 
     @media screen and (min-width:768px) {
@@ -224,6 +228,10 @@
     text-decoration: none;
 
     color: $second-text-color;
+
+    @media screen and (max-width:479px) {
+        font-size: 5vw;
+    }
 
     @media screen and (min-width:768px) {
         font-size: 12px;
@@ -260,11 +268,6 @@
     justify-content: space-between;
     margin-top: 64px;
 
-    @media screen and (max-width:479px) {
-        flex-direction: column;
-        align-content: start;
-
-    }
 
     @media screen and (min-width:768px) {
         display: none;
@@ -272,15 +275,10 @@
 }
 
 
-.social-list__item:not(:last-child) {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
 
-    @media screen and (max-width:479px) {
-        padding-right: 0;
-        margin-bottom: 10px;
-        border: none
-    }
+.social-list__border {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    transform: border rotate(90deg);
 }
 
 .social-list__link {
@@ -290,4 +288,9 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     color: $hover-focus-color;
+
+    @media screen and (max-width:479px) {
+        font-size: 4vw;
+
+    }
 }
