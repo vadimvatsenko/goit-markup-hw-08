@@ -1,6 +1,4 @@
 .header-button {
-  position: absolute;
-  right: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +6,7 @@
   border: none;
   color: inherit;
   background-color: transparent;
-  z-index: 5;
+  z-index: 3;
   cursor: pointer;
   margin-left: auto;
 
@@ -24,13 +22,18 @@
   &__open-icon,
   &__close-icon {
     display: inline-block;
-
-
     fill: $main-text-color;
     @include transition(fill);
   }
 
+  &__close-icon {
+    display: none;
+  }
 
+  &.is-open {
+    position: fixed;
+    right: 15px;
+  }
 
   &.is-open &__close-icon {
     display: block;

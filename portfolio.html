@@ -107,17 +107,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_1/project_1_mobile_450.jpg 450w,
-                  ./image/projects/project_1/project_1_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_1/project_1_tablet_354.jpg 354w,
-                  ./image/projects/project_1/project_1_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_1/project_1_desktop_370.jpg 370w,
-                  
-                  ./image/projects/project_1/project_1_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_1/project_1_desktop_370.jpg" alt="Веб-сайт Технокряк"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_1/project_1_mobile_450.jpg 1x, ./image/projects/project_1/project_1_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_1/project_1_tablet_354.jpg 1x, ./image/projects/project_1/project_1_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_1/project_1_desktop_370.jpg 1x, ./image/projects/project_1/project_1_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_1/project_1_desktop_370.jpg" alt="Веб-сайт Технокряк"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -133,16 +136,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_2/project_2_mobile_450.jpg 450w,
-                  ./image/projects/project_2/project_2_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_2/project_2_tablet_354.jpg 354w,
-                  ./image/projects/project_2/project_2_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_2/project_2_desktop_370.jpg 370w,
-                  ./image/projects/project_2/project_2_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_2/project_2_desktop_370.jpg" alt=" Постер Нью Орлеан"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_2/project_2_mobile_450.jpg 1x, ./image/projects/project_2/project_2_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_2/project_2_tablet_354.jpg 1x, ./image/projects/project_2/project_2_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_2/project_2_desktop_370.jpg 1x, ./image/projects/project_2/project_2_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_2/project_2_desktop_370.jpg" alt=" Постер Нью Орлеан"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -159,16 +166,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_3/project_3_mobile_450.jpg 450w,
-                  ./image/projects/project_3/project_3_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_3/project_3_tablet_354.jpg 354w,
-                  ./image/projects/project_3/project_3_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_3/project_3_desktop_370.jpg 370w,
-                  ./image/projects/project_3/project_3_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_3/project_3_desktop_370.jpg" alt=" Приложение для Ресторан СиФуд"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_3/project_3_mobile_450.jpg 1x, ./image/projects/project_3/project_3_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_3/project_3_tablet_354.jpg 1x, ./image/projects/project_3/project_3_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_3/project_3_desktop_370.jpg 1x, ./image/projects/project_3/project_3_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_3/project_3_desktop_370.jpg" alt=" Приложение для Ресторан СиФуд"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -185,16 +196,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_4/project_4_mobile_450.jpg 450w,
-                  ./image/projects/project_4/project_4_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_4/project_4_tablet_354.jpg 354w,
-                  ./image/projects/project_4/project_4_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_4/project_4_desktop_370.jpg 370w,
-                  ./image/projects/project_4/project_4_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_4/project_4_desktop_370.jpg" alt="Маркетинг Проект Прайм"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_4/project_4_mobile_450.jpg 1x, ./image/projects/project_4/project_4_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_4/project_4_tablet_354.jpg 1x, ./image/projects/project_4/project_4_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_4/project_4_desktop_370.jpg 1x, ./image/projects/project_4/project_4_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_4/project_4_desktop_370.jpg" alt="Маркетинг Проект Прайм"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -211,16 +226,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_5/project_5_mobile_450.jpg 450w,
-                  ./image/projects/project_5/project_5_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_5/project_5_tablet_354.jpg 354w,
-                  ./image/projects/project_5/project_5_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_5/project_5_desktop_370.jpg 370w,
-                  ./image/projects/project_5/project_5_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_5/project_5_desktop_370.jpg" alt=" Проект Коробки"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_5/project_5_mobile_450.jpg 1x, ./image/projects/project_5/project_5_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_5/project_5_tablet_354.jpg 1x, ./image/projects/project_5/project_5_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_5/project_5_desktop_370.jpg 1x, ./image/projects/project_5/project_5_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_5/project_5_desktop_370.jpg" alt=" Проект Коробки"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -237,16 +256,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_6/project_6_mobile_450.jpg 450w,
-                  ./image/projects/project_6/project_6_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_6/project_6_tablet_354.jpg 354w,
-                  ./image/projects/project_6/project_6_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_6/project_6_desktop_370.jpg 370w,
-                  ./image/projects/project_6/project_6_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_6/project_6_desktop_370.jpg" alt="Веб-сайт Вдохновение не имеет границ"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_6/project_6_mobile_450.jpg 1x, ./image/projects/project_6/project_6_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_6/project_6_tablet_354.jpg 1x, ./image/projects/project_6/project_6_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_6/project_6_desktop_370.jpg 1x, ./image/projects/project_6/project_6_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_6/project_6_desktop_370.jpg"
+                    alt="Веб-сайт Вдохновение не имеет границ" class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -263,16 +286,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_7/project_7_mobile_450.jpg 450w,
-                  ./image/projects/project_7/project_7_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_7/project_7_tablet_354.jpg 354w,
-                  ./image/projects/project_7/project_7_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_7/project_7_desktop_370.jpg 370w,
-                  ./image/projects/project_7/project_7_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_7/project_7_desktop_370.jpg" alt="Издание Лимитед"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_7/project_7_mobile_450.jpg 1x, ./image/projects/project_7/project_7_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_7/project_7_tablet_354.jpg 1x, ./image/projects/project_7/project_7_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_7/project_7_desktop_370.jpg 1x, ./image/projects/project_7/project_7_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_7/project_7_desktop_370.jpg" alt="Издание Лимитед"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -289,16 +316,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_8/project_8_mobile_450.jpg 450w,
-                  ./image/projects/project_8/project_8_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_8/project_8_tablet_354.jpg 354w,
-                  ./image/projects/project_8/project_8_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_8/project_8_desktop_370.jpg 370w,
-                  ./image/projects/project_8/project_8_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_8/project_8_desktop_370.jpg" alt="Проект ЛАБ"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_8/project_8_mobile_450.jpg 1x, ./image/projects/project_8/project_8_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_8/project_8_tablet_354.jpg 1x, ./image/projects/project_8/project_8_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_8/project_8_desktop_370.jpg 1x, ./image/projects/project_8/project_8_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_8/project_8_desktop_370.jpg" alt="Проект ЛАБ"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -315,16 +346,20 @@
           <li class="portfolio-list__item">
             <a href="" class="portfolio-list__link">
               <div class="portfolio-list__overlay">
-                <img srcset="
-                  ./image/projects/project_9/project_9_mobile_450.jpg 450w,
-                  ./image/projects/project_9/project_9_mobile_450@2x.jpg 900w,
-                  ./image/projects/project_9/project_9_tablet_354.jpg 354w,
-                  ./image/projects/project_9/project_9_tablet_354@2x.jpg 708w, 
-                  ./image/projects/project_9/project_9_desktop_370.jpg 370w,
-                  ./image/projects/project_9/project_9_desktop_370@2x.jpg 740w"
-                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
-                  src="./image/projects/project_9/project_9_desktop_370.jpg" alt="Приложение Растущий Бизнес"
-                  class="portfolio-list__img" width="370" />
+                <picture>
+                  <source
+                    srcset="./image/projects/project_9/project_9_mobile_450.jpg 1x, ./image/projects/project_9/project_9_mobile_450@2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <source
+                    srcset="./image/projects/project_9/project_9_tablet_354.jpg 1x, ./image/projects/project_9/project_9_tablet_354@2x.jpg 2x"
+                    media="(max-width:1199px)">
+                  <source
+                    srcset="./image/projects/project_9/project_9_desktop_370.jpg 1x, ./image/projects/project_9/project_9_desktop_370@2x.jpg 2x"
+                    media="(min-width:1200px)">
+
+                  <img src="./image/projects/project_9/project_9_desktop_370.jpg" alt="Приложение Растущий Бизнес"
+                    class="portfolio-list__img" width="370" />
+                </picture>
                 <p class="portfolio-list__descr">
                   Ресурс предлагает комплексные предложения с разным уровнем функционала и
                   сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании

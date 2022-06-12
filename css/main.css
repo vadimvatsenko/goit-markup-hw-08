@@ -136,6 +136,7 @@ img {
 @media screen and (max-width: 767px) {
   .header-menu {
     position: fixed;
+    overflow-y: scroll;
     height: 100vh;
   }
 }
@@ -503,8 +504,6 @@ img {
 }
 
 .header-button {
-  position: absolute;
-  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,7 +517,7 @@ img {
   border: none;
   color: inherit;
   background-color: transparent;
-  z-index: 5;
+  z-index: 3;
   cursor: pointer;
   margin-left: auto;
 }
@@ -539,6 +538,15 @@ img {
   fill: #212121;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-button__close-icon {
+  display: none;
+}
+
+.header-button.is-open {
+  position: fixed;
+  right: 15px;
 }
 
 .header-button.is-open .header-button__close-icon {
@@ -881,50 +889,47 @@ img {
   padding-bottom: 118px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 575px) {
   .banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bg/banner-mobile.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/banner-mobile.jpg);
-    min-width: 100%;
-    max-height: 400px;
+    max-width: 575px;
   }
 }
 
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 575px) and (min-device-pixel-ratio: 2), screen and (max-width: 575px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 575px) and (min-resolution: 192dpi), screen and (max-width: 575px) and (min-resolution: 2dppx) {
   .banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bg/banner-mobile@2x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/banner-mobile@2x.jpg);
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 959px) {
   .banner {
-    min-width: 100%;
-    min-height: 400px;
+    max-width: 959px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bg/banner-tablet.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/banner-tablet.jpg);
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 576px) and (max-width: 959px) and (min-device-pixel-ratio: 2), screen and (min-width: 576px) and (max-width: 959px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 576px) and (max-width: 959px) and (min-resolution: 192dpi), screen and (min-width: 576px) and (max-width: 959px) and (min-resolution: 2dppx) {
   .banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bg/banner-tablet@2x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/banner-tablet@2x.jpg);
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 960px) {
   .banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bg/banner-desktop.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/banner-desktop.jpg);
     max-width: 1600px;
-    min-height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 960px) and (min-device-pixel-ratio: 2), screen and (min-width: 960px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 960px) and (min-resolution: 192dpi), screen and (min-width: 960px) and (min-resolution: 2dppx) {
   .banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/bg/banner-desktop@2x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/banner-desktop@2x.jpg);
