@@ -155,7 +155,6 @@
 }
 
 .contact-list {
-    // margin-top: 302px;
 
     @media screen and (min-width: 768px) {
         margin-top: 0;
@@ -274,7 +273,6 @@
     display: flex;
     margin-top: 64px;
 
-
     @media screen and (min-width:768px) {
         display: none;
     }
@@ -305,12 +303,6 @@
     letter-spacing: 0.02em;
     text-decoration: none;
     color: $hover-focus-color;
-
-
-
-
-
-
 
     @media screen and (max-width:479px) {
         font-size: 3.25vw;
